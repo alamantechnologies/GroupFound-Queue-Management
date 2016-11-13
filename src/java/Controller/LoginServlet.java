@@ -31,36 +31,27 @@ public class LoginServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-            response.setContentType("text/html;charset=UTF-8");
-            try (PrintWriter out = response.getWriter())
-        
-        {
-        
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+
             String userName = request.getParameter("UserName");
             String password = request.getParameter("pwd");
-           
 
-            LoginModel lm=new LoginModel();
-            
+            LoginModel lm = new LoginModel();
+
             lm.setUserName(userName);
             lm.setPassword(password);
-            
+
             LoginDao loginDao = new LoginDao();
-            String userValidate = loginDao.authenticateUser(lm);
-          
-            
-            if(userValidate.equals("SUCCESS")) 
-            {
+
+            if (loginDao.authenticateUser(lm)) {
                 request.setAttribute("userName", userName);
                 request.getRequestDispatcher("/Administrator.jsp").forward(request, response);
-                }
-                else
-                {
-                request.setAttribute("errMessage", userValidate); 
-                request.getRequestDispatcher("/Administrator.jsp").forward(request, response);
-                }
-            
-            
+            } else {
+                request.setAttribute("errMessage", "Invalid User Name or Password!");
+                request.getRequestDispatcher("/Error.jsp").forward(request, response);
+            }
+
         }
     }
 
