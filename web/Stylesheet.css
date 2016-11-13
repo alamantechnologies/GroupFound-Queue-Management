@@ -1,0 +1,210 @@
+
+.body
+{
+background:url('img/bk1.jpg')no-repeat;
+background-size:100%;
+height: 140px;
+display:block;
+padding:0 !important;
+margin:0;
+color: #838282;
+
+}
+
+.bodyAdd
+{
+ background:url('img/bk2.jpg')no-repeat;
+background-size:100%;
+height: 140px;
+display:block;
+padding:0 !important;
+margin:0;
+
+}
+#bbk
+{
+background:url('img/bk13.jpg')no-repeat;
+background-size:100%;
+height: 500px;
+display:block;
+padding:0 !important;
+margin:0;
+}
+#cbk
+{
+background:url('img/bk13.jpg')no-repeat;
+background-repeat: no-repeat;
+background-size:100%;
+height: 500px;
+display:block;
+padding:0 !important;
+margin:0;
+}
+#cbody
+{
+
+background-size:100%;
+height: 500px;
+display:block;
+padding:0 !important;
+margin:0;
+background: #3a3a3a;
+
+
+}
+.cbody h1
+
+{
+ color: #08d698;
+}
+.adbody h1
+{
+    color: #08d698;
+}
+.jumbotron
+{ 
+    margin-top: 100px;
+    color:#08d698;
+    background-size:100%;
+   
+    background-repeat: no-repeat;
+        
+}
+.jumbotron h1
+{
+    font-size: 100px;
+}
+.cbody h1
+{
+    padding-top: 150px;
+    color:black;
+    
+}
+.bodyAdd h1
+{
+    color: black;
+}
+
+ h1
+{
+    margin-top: 50px;
+    color: wheat;
+    font-size: 50px;
+    font-style: bold;
+}
+h2
+{
+   
+    margin-top: 100px;
+    
+}
+h3
+{
+    margin-top: 100px;
+    margin-left: 100px;
+}
+.tittle-line {
+	background-color: #898989;
+	display: inline-block;
+	height: 3px;
+	margin-bottom: 16px;
+	width: 100px;
+         margin-left: 560px;
+}
+.navgation
+{
+    margin-left: 220px;
+    margin-top: 150px;
+    
+}
+.navgation button
+{
+    margin-left: 20px;
+    height: 100px;
+    width: 230px;
+    color:black;
+    font-size: 30px;
+    background-color: Transparent;
+    outline: black;
+    font-style: bold;
+     
+    
+}
+.navgation button:hover
+{
+    background: wheat;
+    opacity: .9;
+    outline-color: black;
+    
+}
+.navgation button a
+{
+    text-decoration: none;
+    color: black;
+   
+}
+#h1 h1
+{
+    color: wheat;
+    
+}
+.container table
+{
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.formD
+{
+    margin-top: 100px;
+    margin-left: 500px;
+    width: 250px;
+}
+.formDetails
+{
+
+	border-radius: 20px;
+	height: 350px;
+	width: 280px;
+	
+	margin-left: 500px;
+
+}
+.formDetails form
+{
+	margin-top: 50px;
+	margin-left: 10px;
+	
+}
+.Details ul li
+{
+    margin-left: 500px;
+    padding-left: 150px;
+}
+.form2,#form3,#form4
+{
+        height: 350px;
+	width: 280px;
+	margin-top: 50px;
+	margin-left: 440px;
+}
+.form2 button,#form3 button
+{
+    
+    margin-top: 20px;
+    width: 70px;
+    
+    
+   
+}
+.list-group a
+{
+    width: 250px;
+    margin-left: 430px;
+    margin-top: 30px;
+}
+.spn
+{
+    color: black;
+    
+}
