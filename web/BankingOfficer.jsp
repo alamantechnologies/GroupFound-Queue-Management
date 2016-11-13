@@ -18,7 +18,7 @@
                     <h1 class="post-tittle text-center" style="font-size: 100px;margin-top: 150px;color:#08d698;">Our products</h1>
                   
         </div> 
-                    </div>
+                    
                     <div class="container">
                         <h1 class="text-center spn">View  Products</h1>
                       

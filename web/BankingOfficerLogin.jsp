@@ -22,7 +22,7 @@
         <div class="container">
 	    <h1 class="text-center"  style="color:white;font-size: 70px">Banking Officer</h1>
           
-                    <hr class="small"></h1>
+                    <hr class="small">
 
                         <div class="icon">
                         <div class="col-md-5"></div>
@@ -35,32 +35,34 @@
        
       
       <div class="formDetails">
-          <form id="form1" action="LoginServlet" >
+          <form id="form1" action="BankingServlet" >
      
                         	<div class="form-group">
-                                <label for="inputEmail">Email</label>
-                                <input type="email" name="Email" class="form-control" id="inputEmail" placeholder="Email">
+                                <label for="inputUserName">UserName</label>
+                                <input type="text" name="UserName" class="form-control" id="inputName" placeholder="UserName"   required>
                                 </div>
-    
+          
                                 <div class="form-group">
                                 <label for="inputPassword">Password</label>
-                                <input type="password" name="pwd" class="form-control" id="inputPassword" placeholder="Password">
+                                <input type="password" name="pwd" class="form-control" id="inputPassword" placeholder="Password"  required>
                                 </div>
-    
+                               </form>
                                 <div class="checkbox">
-                        	<label><input type="checkbox"> Remember me</label>
+          
+                                    <label><input type="checkbox"> Remember me</label>
                                 <label><a href="#">forgot password</label>
                                 </div>
-                                 </form>
 
     
                                  <button type="submit" class="btn btn-primary" form="form1">Login</button>
                                  <button type="submit" class="btn btn-primary" form="form1">Sign Up</button>
+          
+
         
         
         
-        
-        
+      </div>
+  
         
         
         <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>

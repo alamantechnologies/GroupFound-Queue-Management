@@ -69,14 +69,6 @@
                             i++;
                     }
                     %>
-                    <!--
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                    -->
             </tbody>
         </table>
     </div>
@@ -96,24 +88,29 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
+            
+             <%
+                    
+                    
+                    psmt = con.prepareStatement("SELECT * FROM branchdetails");
+                    
+                    rs = psmt.executeQuery();
+                    
+                    while(rs.next())
+                    {
+                        %>
+                        <tr>
+                          
+                            <td><%=rs.getString("BranchCode") %></td>
+                            <td><%=rs.getString("BranchName") %></td>
+                            <td><%=rs.getString("BranchLocation") %></td>
+                            <td><%=rs.getString("serviceDesk") %></td>
+                        </tr>
+                        <%
+                            i++;
+                    }
+                    %>
+                
         </tbody>
     </table>
 
@@ -133,12 +130,27 @@
         </thead>
 
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
+              <%
+                    
+                    
+                    psmt = con.prepareStatement("SELECT * FROM servicedeskdetails");
+                    
+                    rs = psmt.executeQuery();
+                    
+                    while(rs.next())
+                    {
+                        %>
+                        <tr>
+                            
+                            <td><%=rs.getString("ServiceDeskCode") %></td>
+                            <td><%=rs.getString("BrancjCode") %></td>
+                            <td><%=rs.getString("IsActive") %></td>
+                            <td><%=rs.getString("BankingOfficerCode") %></td>
+                        </tr>
+                        <%
+                            i++;
+                    }
+                    %>
         </tbody>
     </table>
 </div>
@@ -146,23 +158,49 @@
 
 <h1 class="text-center" style="color: #08d698;" >Costumer <span class="spn">Details</span></h1>
 <hr class="tittle-line">
-<div class="formD"
 
 
-     <form class="form-group">
+
+
+
+
+
+<div class="form2" style="margin-left:490px;">
+       
+              <form  action="ActionServlet" method="post" >
+       
+                  <div class="form-group">
+
+
+                <label for="customerID">CustomerID</label>
+                
+                <input type="text" class="form-control" name="CostumerID" placeholder="CustomerID" required>
+               
+                  </div>
+
 
         <div class="form-group">
 
 
+            <label for="inputName">CoupunNumber</label>
+            <input type="text" class="form-control" name="coupunno" placeholder="coupunNumber" required>
+        </div>
+         
+         
+         
+         
+        <div class="form-group">
+
+
             <label for="inputName">Name</label>
-            <input type="email" class="form-control" id="inputName" placeholder="Email">
+            <input type="text" class="form-control" name="name" placeholder="name" required>
         </div>
 
 
         <div class="form-group">
 
             <label for="inputEmail">Email</label>
-            <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+            <input type="text" class="form-control" name="email" placeholder="Email">
 
 
         </div>
@@ -171,7 +209,7 @@
         <div class="form-group">
 
             <label for="inputPhoneNumber">Phone number</label>
-            <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Phone number">
+            <input type="text" class="form-control" name="phone" placeholder="Phone number" required>
 
 
         </div>
@@ -181,14 +219,13 @@
 
             <label for="inputList">Product Type</label>
 
-            <select class="form-control input-lg" >
-                <option>select</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
+            <select class="form-control input-lg" name="producttype"  required>
+                <option >select</option>
+                <option>Current</option>
+                <option>fixed</option>
+                <option>creadit</option>
+                <option>savings</option>
+               
 
             </select>
 
@@ -198,16 +235,14 @@
         <div class="form-group">
 
 
-            <input type="submit" class="form-control"  placeholder="Phone number">
+            <input type="submit" class="form-control" name="submiit">
 
-
+    
         </div>
-
-
     </form>
+     
+ </div>
 
-
-</div>
 <hr>
 <h1 class="text-center"  style="color: #08d698;">Coupon <span class="spn"> Details </span></h1>
 <hr class="tittle-line">
@@ -222,31 +257,26 @@
                 </tr>
 
             <tbody>
-                <tr>
-
-                    <td>Mark</td>
-                    <td>Otto</td>
-
-                </tr>
-                <tr>
-
-                    <td>Mark</td>
-                    <td>Otto</td>
-
-                </tr>
-                <tr>
-
-                    <td>Mark</td>
-                    <td>Otto</td>
-
-                </tr>
-                <tr>
-
-                    <td>Mark</td>
-                    <td>Otto</td>
-
-                </tr>
-
+                <%
+                    
+                    
+                    psmt = con.prepareStatement("SELECT * FROM coupondetails");
+                    
+                    rs = psmt.executeQuery();
+                    
+                    while(rs.next())
+                    {
+                        %>
+                        <tr>
+                            
+                            <td><%=rs.getString("CouponId") %></td>
+                            <td><%=rs.getString("CouponNumber") %></td>
+                           
+                        </tr>
+                        <%
+                            i++;
+                    }
+                    %>
             </tbody>
             </thead>
         </table>
