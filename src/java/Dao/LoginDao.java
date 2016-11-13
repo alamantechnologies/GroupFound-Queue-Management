@@ -30,7 +30,7 @@ public class LoginDao {
             /*Preparing SQL statement or query to be executed. for security always 
             use java.sql.PreparedStatement instead of java.sql.Statement.
             */
-            smt = con.prepareStatement("SELECT password FROM userrg WHERE userName = ?");
+            smt = con.prepareStatement("SELECT password FROM userrg WHERE Email = ?");
             
             /*adding the value of userName value into the preparedStatement query.*/
             smt.setString(1, userName);

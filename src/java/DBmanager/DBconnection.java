@@ -13,7 +13,7 @@ public class DBconnection
     /*replace 'root' with your MySQL Server's desired user name.*/
     private static final String DB_USR = "root";
     /*replace 'password' with your MySQL Server password(of user account 'root').*/
-    private static final String DB_PAS = "password";
+    private static final String DB_PAS = "";
     
     /*Connection variable con is static for avoiding the creation of multiple connections for each request.*/
     private static Connection con;
