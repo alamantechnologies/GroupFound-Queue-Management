@@ -26,7 +26,6 @@ package Controller;
 import DBmanager.DBconnection;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -73,7 +72,6 @@ public class ActionServlet extends HttpServlet {
                 psmt.setString(6, productType);
 
                 int i = psmt.executeUpdate();
-                System.out.println(i);
                 if (i > 0) {
                     out.print("You are successfully registered...");
                 }
